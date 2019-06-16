@@ -14,5 +14,10 @@ export default {
 
 ul
     display flex
+    justify-content center
+
+    li
+        list-style none
+        padding 5px 20px
 
 </style>
