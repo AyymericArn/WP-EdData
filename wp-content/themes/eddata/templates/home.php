@@ -1,1 +1,1 @@
-<?= "mlkjmklsdkl" ?>
+<?= "this is the front page" ?>

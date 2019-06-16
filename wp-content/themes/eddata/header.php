@@ -8,6 +8,9 @@
   <?php wp_head(); ?>
 </head>
 <body>
+<div id="app">
   <header>
-    <?php wp_nav_menu('header'); ?>
+    <menu-wrapper>
+      <?php wp_nav_menu('header'); ?>
+    </menu-wrapper>
   </header>
