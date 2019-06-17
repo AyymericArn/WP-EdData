@@ -1,0 +1,19 @@
+# Ignore tout à la racine, sauf .gitignore et "wp-content"
+*
+!.gitignore
+!wp-content
+
+
+# Ignore le contenu de "wp-content" sauf "plugins", "themes" et "mu-plugins"
+!wp-content/plugins
+!wp-content/plugins/**
+!wp-content/themes
+!wp-content/themes/**
+!wp-content/mu-plugins
+!wp-content/mu-plugins/**
+
+# Ignore le contenu relatif à Vue/Parcel/Node
+wp-content/themes/eddata/dist/
+wp-content/themes/eddata/node_modules/
+wp-content/themes/eddata/.cache/
+wp-content/themes/eddata/.nuxt
