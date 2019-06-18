@@ -15,8 +15,7 @@ export default {
 
 <style lang="stylus" scoped>
 
-* {
-    color: red;
-}
+*
+    color red
 
 </style>

@@ -1,6 +1,7 @@
 <template>
     <div class="menu">
         <slot></slot>
+        <img src="../../images/search.svg" alt="">
     </div>
 </template>
 
@@ -14,10 +15,10 @@ export default {
 
 ul
     display flex
-    justify-content center
+    justify-content space-between
+    padding 2.125rem 11.5rem
 
     li
         list-style none
-        padding 5px 20px
 
 </style>
