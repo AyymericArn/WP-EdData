@@ -1,6 +1,6 @@
 <template>
-    <div class="big-image">
-        <div class="text-container">
+    <div class="small-image-down">
+        <div class="text-container-down">
             <h2><a :href="parsedData.link">{{ parsedData.title }}</a></h2>
             <p v-html="postcontent"></p>
         </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:'Posts',
+    name:'SmallPostsDown',
     props: {
         postdata: String,
         postcontent: String
@@ -27,19 +27,11 @@ export default {
 
 <style lang="stylus" scoped>
 
-    .big-image
-        // position relative
-        background grey
-        width 48vw
-        height 84vh
-        border-radius 6px
+.small-image-down
+    background purple 
+    width 23.4vw
+    height 47vh
+    border-radius 6px
 
-        .text-container
-            width 30vw
-            height 14vh
-            font-weight 500
-            font-size 2.25rem
-            line-height 2.6875rem
-    
 </style>
 
