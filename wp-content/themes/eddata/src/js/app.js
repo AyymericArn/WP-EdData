@@ -2,20 +2,21 @@ import Vue from 'vue'
 import '../styles/style.styl'
 import '../styles/reset.css'
 
-import Test from './components/Test.vue'
-import BigPosts from './components/BigPosts.vue'
-import SmallPostsUp from './components/SmallPostsUp.vue'
-import SmallPostsDown from './components/SmallPostsDown.vue'
 import MenuWrapper from './components/Menu.vue'
-import PostThumbnail from './components/PostThumbnail.vue'
+import LatestPosts from './components/Home/LatestPosts.vue'
+import BigPosts from './components/Home/BigPosts.vue'
+import SmallPostsUp from './components/Home/SmallPostsUp.vue'
+import SmallPostsDown from './components/Home/SmallPostsDown.vue'
+import PostThumbnail from './components/Home/PostThumbnail.vue'
+import Sections from './components/Home/Sections.vue'
 
-
-Vue.component('test', Test)
 Vue.component('menu-wrapper', MenuWrapper)
 Vue.component('post-thumbnail', PostThumbnail)
+Vue.component('latest-posts', LatestPosts)
 Vue.component('big-posts', BigPosts)
 Vue.component('small-posts-up', SmallPostsUp)
 Vue.component('small-posts-down', SmallPostsDown)
+Vue.component('sections', Sections)
 
 const app = new Vue({
     el: '#app'

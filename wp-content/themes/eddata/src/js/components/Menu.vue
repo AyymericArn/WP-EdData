@@ -1,7 +1,6 @@
 <template>
     <div class="menu">
         <slot></slot>
-        <img src="../../images/search.svg" alt="">
     </div>
 </template>
 
