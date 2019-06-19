@@ -1,6 +1,5 @@
 <template>
     <div class="latest-posts">
-        <h1>Latest posts</h1>
         <slot></slot>
         <!-- <big-posts></big-posts>
         <small-posts-up></small-posts-up>

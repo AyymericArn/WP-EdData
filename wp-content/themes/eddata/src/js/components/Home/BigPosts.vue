@@ -37,7 +37,7 @@ export default {
         background-size 138%
 
         .text-container
-            width 30vw
+            width 40vw
             height 22vh
             font-weight 500
             font-size 2.25rem

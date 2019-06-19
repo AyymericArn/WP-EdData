@@ -17,13 +17,13 @@
 
 
     <big-posts postcontent="<?= get_the_content() ?>" postdata="<?= htmlspecialchars(json_encode($postData), ENT_QUOTES, 'UTF-8') ?>"></big-posts>
-    <small-posts-up postcontent="<?= get_the_content() ?>" postdata="<?= htmlspecialchars(json_encode($postData), ENT_QUOTES, 'UTF-8') ?>"></small-posts-up>
+    <!-- Faire pareil avec les small-posts -->
+
 
     <?php endwhile; else: ?>
     <p>Sorry, no posts matched your criteria.</p>
     <?php endif; ?>
-
-    apprend à link les données batard
 </latest-posts>
 
 <sections></sections>
+<all-articles></all-articles>

@@ -18,10 +18,10 @@ export default {
         return {
             sections: [
                 { text: "Toutes", link : this.parsedData },
-                { text: "mkldfkl", link : this.parsedData },
-                { text: "oui", link : this.parsedData },
-                { text: "oui", link : this.parsedData },
-                { text: "oui", link : this.parsedData }
+                { text: "France", link : this.parsedData },
+                { text: "International", link : this.parsedData },
+                { text: "Technologie", link : this.parsedData },
+                { text: "inégalités", link : this.parsedData }
             ]
         }
     }
@@ -31,7 +31,10 @@ export default {
 <style lang="stylus" scoped>
 
     .sections
-        background-color red
+        // background-color red
+        height 5vh
+        margin 0 199px
+        padding 2vh
 
         ul
             display flex
@@ -41,7 +44,6 @@ export default {
             li
                 position relative
                 list-style none
-                margin auto 
 
                 a
                     display block

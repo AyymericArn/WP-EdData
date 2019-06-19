@@ -35,6 +35,8 @@ button
     padding: 9px 24px
     color: #333333;
     text-transform uppercase
+    margin auto
+    cursor pointer
 
     &.isActive
         color #067CFA
