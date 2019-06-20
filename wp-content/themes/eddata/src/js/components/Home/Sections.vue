@@ -31,10 +31,12 @@ export default {
 <style lang="stylus" scoped>
 
     .sections
-        // background-color red
-        height 5vh
-        margin 0 199px
-        padding 2vh
+        // background-color yellow 
+        height 10vh
+        margin auto 
+        display: flex;
+        width: 73vw;
+        justify-content: center;
 
         ul
             display flex
@@ -47,7 +49,7 @@ export default {
 
                 a
                     display block
-                    padding 3vh 2vw
+                    padding 0 2.5vw
                     text-decoration none
                     text-transform uppercase
 

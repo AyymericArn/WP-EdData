@@ -1,5 +1,5 @@
 <template>
-    <div class="latest-posts">
+    <div class="latest-posts-container">
         <slot></slot>
         <!-- <big-posts></big-posts>
         <small-posts-up></small-posts-up>
@@ -33,7 +33,7 @@ export default {
 
 <style lang="stylus">
 
-.latest-posts
+.latest-posts-container
     position relative
     background red
     width 73vw

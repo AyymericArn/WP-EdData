@@ -23,6 +23,7 @@
     <?php endwhile; else: ?>
     <p>Sorry, no posts matched your criteria.</p>
     <?php endif; ?>
+    
 </latest-posts>
 
 <sections></sections>

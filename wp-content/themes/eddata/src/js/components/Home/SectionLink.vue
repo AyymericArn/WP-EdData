@@ -32,7 +32,7 @@ button
     font-weight: 300;
     font-size: 18px;
     line-height: 21px;
-    padding: 9px 24px
+    padding: 0 2.5vw
     color: #333333;
     text-transform uppercase
     margin auto
