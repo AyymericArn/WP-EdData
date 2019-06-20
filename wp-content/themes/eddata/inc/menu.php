@@ -3,7 +3,10 @@
 function add_menus() {
     add_theme_support('menus');
 
-    register_nav_menu('header', 'Menu header');
+    register_nav_menus([
+        'header' => 'Menu header',
+        'footer' => 'Menu footer'
+    ]);
 }
 
 add_action('init', 'add_menus');

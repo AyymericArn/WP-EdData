@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:'Posts',
+    name:'BigPosts',
     props: {
         postdata: String,
         postcontent: String
