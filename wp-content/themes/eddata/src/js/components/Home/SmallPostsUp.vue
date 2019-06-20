@@ -25,13 +25,17 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 
 .small-image-up
     background purple 
     width 23.4vw
-    height 47vh
+    height 41vh
     border-radius 6px
+    grid-column 2 / 2
+    grid-row 1
+    background-image url("../../../images/small-img-up.jpg")
+    background-size 100%
 
 </style>
 

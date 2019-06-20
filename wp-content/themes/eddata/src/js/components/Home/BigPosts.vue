@@ -20,25 +20,34 @@ export default {
         }
     },
     beforeMount () {
+        console.log(this.postdata)
         this.parsedData = JSON.parse(this.postdata)
     }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 
     .big-image
         background grey
         width 48vw
         height 84vh
         border-radius 6px
+        background-image url("../../../images/big-img.jpg")
+        background-size 138%
 
         .text-container
-            width 30vw
-            height 14vh
+            width 40vw
+            height 22vh
             font-weight 500
             font-size 2.25rem
             line-height 2.6875rem
+            padding-top 60vh
+            padding-left 4vw
+            color white
+
+            a
+                text-transform none 
     
 </style>
 

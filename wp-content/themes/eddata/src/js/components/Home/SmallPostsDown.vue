@@ -20,18 +20,25 @@ export default {
         }
     },
     beforeMount () {
+        console.log(postdata)
         this.parsedData = JSON.parse(this.postdata)
     }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 
 .small-image-down
     background purple 
     width 23.4vw
-    height 47vh
+    height 41vh
+    margin-bottom -100%
     border-radius 6px
+    grid-column 2 / 2
+    grid-row 1
+    margin-top 43vh
+    background-image url("../../../images/small-img-down.jpg")
+    background-size 129%
 
 </style>
 

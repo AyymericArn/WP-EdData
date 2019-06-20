@@ -28,9 +28,12 @@ Vue.component('test', Test)
 
 // Home
 Vue.component('post-thumbnail', PostThumbnail)
+Vue.component('latest-posts', LatestPosts)
 Vue.component('big-posts', BigPosts)
 Vue.component('small-posts-up', SmallPostsUp)
 Vue.component('small-posts-down', SmallPostsDown)
+Vue.component('sections', Sections)
+Vue.component('all-articles', AllArticles)
 
 Vue.component('latest-posts', LatestPosts)
 Vue.component('other-posts', OtherPosts)

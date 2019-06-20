@@ -22,9 +22,10 @@ $otherPostsDatas = array_slice($postDatas, 2);
 
 ?>
 
-<?php endwhile; else: ?>
-<p>Sorry, no posts matched your criteria.</p>
-<?php endif; ?>
+    <?php endwhile; else: ?>
+    <p>Sorry, no posts matched your criteria.</p>
+    <?php endif; ?>
+</latest-posts>
 
 <div class="showcase">
 
