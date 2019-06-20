@@ -1,6 +1,8 @@
 <template>
     <div class="menu">
-        <slot></slot>
+        <img src="../../images/logo.png" alt="Educaviz">
+        <!-- <slot></slot> -->
+        <img src="../../images/search.svg" alt="search">
     </div>
 </template>
 
@@ -12,12 +14,22 @@ export default {
 
 <style lang="stylus" scoped>
 
-ul
+.menu
     display flex
+    align-items center
     justify-content space-between
-    padding 2.125rem 11.5rem
+    height 100px
+    padding 0 160px
 
-    li
-        list-style none
+    ul
+        display flex
+        width auto
+        justify-content space-between
+        padding 2.125rem 0
+        padding-bottom 20px
+        box-sizing border-box
+
+        li
+            list-style none
 
 </style>

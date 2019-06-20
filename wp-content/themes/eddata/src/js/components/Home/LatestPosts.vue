@@ -1,47 +1,41 @@
 <template>
-    <div class="latest-posts-container">
-        <slot></slot>
-        <!-- <big-posts></big-posts>
-        <small-posts-up></small-posts-up>
-        <small-posts-down></small-posts-down> -->
+    <div class="latests-posts">
+        <Post :data="data[0]" :h="3" :w="3"></Post>
+        <Post :data="data[1]"></Post>
+        <Post :data="data[2]"></Post>
     </div>
 </template>
 
 <script>
-import BigPosts from './BigPosts.vue'
-import SmallPostsUp from './SmallPostsUp.vue'
-import SmallPostsDown from './SmallPostsDown.vue'
+import Post from './Post'
 
 export default {
-    name:'LatestPosts',
-    components:{
-        BigPosts,
-        SmallPostsUp,
-        SmallPostsDown
+    components: {
+        Post
     },
-    props:{
-        postdata: String,
-        postcontent: String
+    props: {
+        postsdata: String
     },
     data () {
         return {
-            parsedData: null
+            data: null
         }
+    },
+    beforeMount () {
+        this.data = JSON.parse(this.postsdata)
     }
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 
-.latest-posts-container
-    position relative
-    background red
-    width 73vw
-    height 84vh
+.latests-posts
+    height 1000px
+    width calc(100% - 320px)
     margin auto
-    margin-top 7vh
     display grid
-    grid-auto-columns auto
+    grid-template-columns 1fr 1fr 1fr
+    grid-template-rows 1fr 1fr
+    grid-gap 20px
 
 </style>
-
