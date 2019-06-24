@@ -4,7 +4,7 @@
         <img :src="illu" alt="illustration">
         <div class="post-text">
             <h1>{{ title }}</h1>
-            <h2 v-html="question">{{ question }}</h2>
+            <h2>{{ question }}</h2>
             <div class="excerpt" v-html="excerpt"></div>
             <div class="author-date">{{ author }}, le {{ date }}</div>
             <a :href="link">Explorer le sujet</a>
