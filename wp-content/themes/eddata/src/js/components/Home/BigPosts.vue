@@ -33,7 +33,6 @@ export default {
         width 48vw
         height 84vh
         border-radius 6px
-        background-image url("../../../images/big-img.jpg")
         background-size 138%
 
         .text-container
