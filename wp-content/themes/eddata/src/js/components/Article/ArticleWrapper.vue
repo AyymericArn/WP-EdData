@@ -1,5 +1,5 @@
 <template>
-    <div class="article-wrapper">
+    <div ref="article" class="article-wrapper">
         <Chapo
             :title="data.title"
             :category="data.category"
@@ -10,6 +10,7 @@
         <Modale @close="toggleModal" v-if="displayModal" :infos="data.questions[0]"></Modale>
         <div class="hider" v-if="displayModal"></div>
         <DataViz></DataViz>
+        <!-- <DataCircle></DataCircle> -->
         <div :class="`content${displayModal ? ' is-hidden' : ''}`" v-html="data.content"></div>
     </div>
 </template>
@@ -18,6 +19,10 @@
 import Chapo from './Chapo'
 import Modale from './Modale'
 import DataViz from './DataViz'
+import DataCircle from './Charts/DataCircle'
+
+import Vue from 'vue'
+
 
 export default {
     data () {
@@ -38,26 +43,31 @@ export default {
     components: {
         Chapo,
         Modale,
-        DataViz
+        DataViz,
+        DataCircle
     },
     beforeMount () {
         this.data = JSON.parse(this.postdata)
+    },
+    mounted () {
+        Vue.component('data-circle', DataCircle)
+        new Vue({
+            el: this.$refs.article.querySelector('.graph-circle')
+        })
     }
 }
 </script>
 
 <style lang="stylus" scoped>
 
-p
-    margin-bottom 16px
-
 .content
-    margin 60px 350px
+    margin 60px auto
+    width 980px
     font-family: Rubik;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 24px;
     color: #333333;
 
     &.is-hidden
