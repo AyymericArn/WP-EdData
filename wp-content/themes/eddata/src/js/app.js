@@ -20,6 +20,7 @@ import Sections from './components/Home/Sections.vue'
 
 import ArticleWrapper from './components/Article/ArticleWrapper.vue'
 import DataViz from './components/Article/DataViz.vue'
+import DataCircle from './components/Article/Charts/DataCircle.vue'
 import Modale from './components/Article/Modale.vue'
 
 // Global
@@ -42,6 +43,7 @@ Vue.component('sections', Sections)
 // Article
 Vue.component('article-wrapper', ArticleWrapper)
 Vue.component('dataviz', DataViz)
+Vue.component('data-circle', DataCircle)
 Vue.component('modale', Modale)
 
 const app = new Vue({
