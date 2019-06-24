@@ -35,7 +35,7 @@ export default {
         height 10vh
         margin auto 
         display: flex;
-        width: 73vw;
+        width calc(100% - 320px)
         justify-content: center;
 
         ul
