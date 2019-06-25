@@ -1,5 +1,5 @@
 <template>
-    <button>
+    <button @click="handleClick">
         {{ label }}
     </button>
 </template>
@@ -8,18 +8,19 @@
 export default {
     name: 'SectionLink',
     props: {
-        label: String
+        label: String,
+        categoryName: String
     },
     data () {
         return {
             isActive: false
         }
     },
-    // methods: {
-    //     toggleActive () {
-    //         this.isActive = !this.isActive
-    //     }
-    // }
+    methods: {
+        handleClick() {
+            this.$emit('categorychange', this.categoryName)
+        }
+    }
 }
 </script>
 

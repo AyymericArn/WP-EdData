@@ -20,7 +20,6 @@ export default {
         }
     },
     beforeMount () {
-        console.log(this.postdata)
         this.parsedData = JSON.parse(this.postdata)
     }
 }

@@ -34,6 +34,7 @@ export default {
     width calc(100% - 320px)
     margin auto
     display grid
+    padding-top 4vh
     grid-template-columns 1fr 1fr 1fr
     grid-template-rows 1fr 1fr
     grid-gap 20px

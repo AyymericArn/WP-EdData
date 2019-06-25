@@ -22,9 +22,6 @@ export default {
                 return `background-image: url(${this.data.illu});`                
             }
         }
-    },
-    mounted () {
-        console.log(this.data)
     }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <nav class="sections">
         <ul>
-            <section-link :label="section.text" v-for="(section, index) in sections" :key="index"><a href="#"></a></section-link>
+            <section-link @categorychange="AjaxCall" :categoryName="categoryName" :label="section.text" v-for="(section, index) in sections" :key="index"><a href="#"></a></section-link>
         </ul>
     </nav>
 </template>
@@ -14,14 +14,29 @@ export default {
     components: {
         SectionLink
     },
+    methods: {
+        AjaxCall(cat)
+        {
+            // console.log(event.currentTarget.__vue__._props.categoryName);
+            console.log(ajaxurl);
+            fetch(ajaxurl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `category=${cat}`
+            }).then(response => response.text())
+            // .then(result => console.log(result))
+        },
+    },
     data() {
         return {
             sections: [
-                { text: "Toutes", link : this.parsedData },
-                { text: "France", link : this.parsedData },
-                { text: "International", link : this.parsedData },
-                { text: "Technologie", link : this.parsedData },
-                { text: "inégalités", link : this.parsedData }
+                { text: "Toutes", cat : 'all' },
+                { text: "France", cat : 'france' },
+                { text: "International", cat : 'inegalite' },
+                { text: "Technologie", cat : 'international' },
+                { text: "inégalités", cat : 'technologies' }
             ]
         }
     }
@@ -31,12 +46,11 @@ export default {
 <style lang="stylus" scoped>
 
     .sections
-        // background-color yellow 
         height 10vh
         margin auto 
         display: flex;
         width calc(100% - 320px)
-        justify-content: center;
+        justify-content center
 
         ul
             display flex
