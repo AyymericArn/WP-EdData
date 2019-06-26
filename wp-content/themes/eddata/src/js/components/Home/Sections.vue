@@ -1,7 +1,7 @@
 <template>
     <nav class="sections">
         <ul>
-            <section-link @categorychange="AjaxCall" :categoryName="categoryName" :label="section.text" v-for="(section, index) in sections" :key="index"><a href="#"></a></section-link>
+            <section-link @categorychange="AjaxCall" :categoryName="section.cat" :label="section.text" v-for="(section, index) in sections" :key="index"></section-link>
         </ul>
     </nav>
 </template>
@@ -22,11 +22,14 @@ export default {
             fetch(ajaxurl, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
                 },
-                body: `category=${cat}`
+                body: `action=ajax-actionpost&category=${cat}`
             }).then(response => response.text())
-            // .then(result => console.log(result))
+            .then(result => {
+                this.$parent.$children[2].otherpostsdata = JSON.parse(result)
+            })
+            
         },
     },
     data() {
@@ -34,9 +37,9 @@ export default {
             sections: [
                 { text: "Toutes", cat : 'all' },
                 { text: "France", cat : 'france' },
-                { text: "International", cat : 'inegalite' },
-                { text: "Technologie", cat : 'international' },
-                { text: "inégalités", cat : 'technologies' }
+                { text: "International", cat : 'international' },
+                { text: "Technologie", cat : 'technologie' },
+                { text: "inégalités", cat : 'inégalité' }
             ]
         }
     }

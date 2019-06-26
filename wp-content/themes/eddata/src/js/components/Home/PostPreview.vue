@@ -1,6 +1,6 @@
 <template>
     <div class="post-preview">
-        <!-- <h5>{{ data.category[0].catname }}</h5> -->
+        <h5>{{ category[0].category_nicename }}</h5>
         <img :src="illu" alt="illustration">
         <div class="post-text">
             <h1>{{ title }}</h1>
@@ -18,11 +18,10 @@
 export default {
     name:'PostPreview',
     props: {
-        data: Object,
         illu: String,
         excerpt: String,
         title: String,
-        category: String,
+        category: Array,
         author: String,
         date: String,
         question: String,

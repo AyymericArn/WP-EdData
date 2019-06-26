@@ -1,6 +1,14 @@
 <template>
     <div class="other-posts">
-        <post-preview v-for="_post in otherpostsdata" :key="_post.id" :illu="_post.illu" :excerpt="_post.excerpt" :title="_post.title" :category="_post.category" :author="_post.author" :date="_post.date" :question="_post.question" :link="_post.link"></post-preview>
+        <post-preview v-for="_post in otherpostsdata" :key="_post.id" 
+            :illu="_post.illu" 
+            :excerpt="_post.excerpt" 
+            :title="_post.title" 
+            :category="_post.category" 
+            :author="_post.author" 
+            :date="_post.date" 
+            :question="_post.question" 
+            :link="_post.link"></post-preview>
     </div>
 </template>
 
@@ -22,6 +30,9 @@ export default {
     },
     beforeMount() {
         this.otherpostsdata = JSON.parse(this.postsdata)
+    },
+    beforeUpdate() {
+        console.log(this.otherpostsdata)
     },
 }
 

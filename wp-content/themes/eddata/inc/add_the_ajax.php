@@ -1,5 +1,4 @@
 <?php
-
 function ajaxJs()
  {
      // Envoyer l'url de admin-ajax.php au fichier app.js via la variable ajaxurl
