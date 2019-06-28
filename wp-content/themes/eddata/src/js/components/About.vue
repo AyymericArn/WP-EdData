@@ -44,7 +44,6 @@ export default {
                 line-height 43px
             
             h3
-                width 35vw
                 font-family Roboto
                 font-style normal
                 font-weight 300
@@ -56,5 +55,77 @@ export default {
             width 50%
             height 80%
             margin 3rem
+
+@media screen and (max-width: 360px){
+    .about
+    {
+        height 100%
+        width 100%
+        display flex
+        flex-direction column
+
+        .txt
+        {
+            width 100%
+
+            h1
+            {
+                width 75vw
+                margin auto
+                text-align center
+            }
+
+            h3
+            {
+                width 66vw
+                text-align center
+                margin auto
+            }
+        }
+
+        img
+        {
+            width 90%
+            margin auto
+        }
+    }
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 899px){
+    
+    .about
+    {
+        height 100%
+        width 100%
+        display flex
+        flex-direction column
+
+        .txt
+        {
+            width 100%
+
+            h1
+            {
+                width 75vw
+                margin auto
+                text-align center
+            }
+
+            h3
+            {
+                width 66vw
+                text-align center
+                margin auto
+            }
+        }
+
+        img
+        {
+            width 90%
+            margin auto
+        }
+    }
+}
 
 </style>
