@@ -30,13 +30,52 @@ export default {
 <style lang="stylus" scoped>
 
 .latests-posts
-    height 1000px
-    width calc(100% - 320px)
+    height 62.5rem
+    width calc(100% - 20rem)
     margin auto
     display grid
     padding-top 4vh
     grid-template-columns 1fr 1fr 1fr
     grid-template-rows 1fr 1fr
     grid-gap 20px
+
+
+@media screen and (max-width 360px){
+
+    .latests-posts
+    {
+        // background-color red
+        width 100%
+        display flex
+        flex-direction column
+        align-items center
+    }
+}
+
+@media screen and (min-width 360px) and (max-width 899px){
+
+    .latests-posts
+    {
+        // background-color red
+        width 100%
+        display flex
+        flex-direction column
+        align-items center
+    }
+}
+
+// @media screen and (min-width 899px) and (max-width 1100px) {
+//     .latests-posts
+//     {
+//         height 30.5rem
+//         width calc(100% - 20rem)
+//         margin auto
+//         display grid
+//         padding-top 4vh
+//         grid-template-columns 1fr 1fr 1fr
+//         grid-template-rows 1fr 1fr
+//         grid-gap 20px
+//     }
+// }
 
 </style>

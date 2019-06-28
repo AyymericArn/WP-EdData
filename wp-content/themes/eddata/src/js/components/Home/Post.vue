@@ -76,4 +76,24 @@ export default {
         padding 8px 16px
 
 
+@media screen and (max-width: 360px){
+
+    .post
+    {
+        width 100%
+        height 50%
+        margin 1rem
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 899px){
+
+    .post
+    {
+        width 100%
+        height 50%
+        margin 1rem
+    }
+}
+
 </style>

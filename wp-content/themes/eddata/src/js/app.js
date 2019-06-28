@@ -23,10 +23,13 @@ import DataViz from './components/Article/DataViz.vue'
 import DataCircle from './components/Article/Charts/DataCircle.vue'
 import Modale from './components/Article/Modale.vue'
 
+import About from './components/About.vue'
+
 // Global
 Vue.component('menu-wrapper', MenuWrapper)
 Vue.component('footer-wrapper', FooterWrapper)
 
+Vue.component('about', About)
 // Home
 // Vue.component('post-thumbnail', PostThumbnail)
 // Vue.component('latest-posts', LatestPosts)

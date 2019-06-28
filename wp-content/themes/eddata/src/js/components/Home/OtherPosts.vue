@@ -41,7 +41,25 @@ export default {
 <style lang="stylus" scoped>
 
 .other-posts
-    width calc(100% - 320px)
+    width calc(100% - 20rem)
     margin auto
 
+
+@media screen and (max-width: 360px){
+
+    .other-posts
+    {
+        width 100%
+    }
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 899px){
+
+    .other-posts
+    {
+        width 100%
+    }
+
+}
 </style>
